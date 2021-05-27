@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="exampleApp">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="defaultCtrl">
+
+   <div class="panel panel-primary">
+      <ng-include src="'table/route.html'" ng-show="currentView == 'route'"></ng-include>
+      <ng-include src="'table/table.html'" ng-show="currentView == 'table'"></ng-include>
+      <ng-include src="'table/edit.html'" ng-show="currentView == 'edit'"></ng-include>
+   </div>
+
+</body>
+
+<script src="js/angular.min.js"></script>
+<script src="js/route.min.js"></script>
+<script src="js/main.js"></script>
+</html>

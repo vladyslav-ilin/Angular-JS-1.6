@@ -1,0 +1,25 @@
+<button class="logout" ng-click="routeEdit()">Log out</button>
+
+<div class="container">
+   <div class="edit">
+
+      <div class="edit__group">
+         <label class="edit__name">Department:</label>
+         <select class="edit__select" ng-model="currentItem.department" ng-options="item for item in select"></select>
+      </div>
+
+      <div class="edit__group">
+         <label class="edit__name">Full name:</label>
+         <input class="edit__full" ng-model="currentItem.name" placeholder="Enter full name"/>
+      </div>
+
+      <div class="edit__group">
+         <label class="edit__name">Notes:</label>
+         <textarea class="edit__text"  ng-model="currentItem.textarea" rows="4"></textarea>
+      </div>
+
+      <button class="edit__btn" ng-click="saveEdit(currentItem)">Save</button>
+      <button class="edit__btn" ng-click="cancelEdit()">Cancel</button>
+   </div>
+
+</div>

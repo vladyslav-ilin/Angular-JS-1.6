@@ -1,0 +1,48 @@
+<div class="container">
+   <div class="form">
+      <h1 class="form__title">Welcome bro!</h1>
+
+      <form class="form__wrapper" name="myForm" novalidate ng-submit="addNewUser(newUser)">
+         <div class="form__table">
+            <div class="table__group">
+               <label class="table__text">Username/Email:</label>
+               <input type="email" name="userEmail" class="form__input" ng-model="newUser.email"
+                  placeholder="Username/Email">
+            </div>
+
+            <div class="table__group">
+               <label class="table__text">Password:</label>
+               <input class="form__input" type="password" name="userName" ng-model="newUser.name" required
+                  placeholder="Password">
+            </div>
+
+            <div class="table__error" ng-show="myForm.userEmail.$invalid && myForm.userEmail.$dirty">
+               <span class="table__span" ng-show="myForm.userEmail.$error.email">
+                  Введите правильный Email
+               </span>
+
+            </div>
+
+            <div class="table__checkbox">
+               <label>
+                  <input name="agreed" type="checkbox" ng-model="newUser.agreed" required>
+                  I agree to the terms and conditions
+               </label>
+            </div>
+
+
+            <button class="btn" ng-click="mainEdit()" ng-disabled="myForm.$invalid"
+               type="submit">Sing in</button>
+         </div>
+
+         <div class="vadit">
+            <span class="vadit__text" ng-class"myForm.$valid ? 'ng-valid' : 'ng-invalid'">
+                 Valid: <span class=" valid__span">{{myForm.$valid}}</span>
+            </span>
+         </div>
+      </form>
+   </div>
+
+   <div class=" loading remove">
+   </div>
+</div>
