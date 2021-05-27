@@ -1,6 +1,13 @@
 <div class="container">
    <div class="form">
+
       <h1 class="form__title">Welcome bro!</h1>
+
+      <div class="table__error" ng-show="myForm.userEmail.$invalid && myForm.userEmail.$dirty">
+         <span class="table__span" ng-show="myForm.userEmail.$error.email">
+            Введите правильный Email
+         </span>
+      </div>
 
       <form class="form__wrapper" name="myForm" novalidate ng-submit="addNewUser(newUser)">
          <div class="form__table">
@@ -16,12 +23,7 @@
                   placeholder="Password">
             </div>
 
-            <div class="table__error" ng-show="myForm.userEmail.$invalid && myForm.userEmail.$dirty">
-               <span class="table__span" ng-show="myForm.userEmail.$error.email">
-                  Введите правильный Email
-               </span>
 
-            </div>
 
             <div class="table__checkbox">
                <label>
@@ -31,8 +33,7 @@
             </div>
 
 
-            <button class="btn" ng-click="mainEdit()" ng-disabled="myForm.$invalid"
-               type="submit">Sing in</button>
+            <button class="btn" ng-click="mainEdit()" ng-disabled="myForm.$invalid" type="submit">Sing in</button>
          </div>
 
          <div class="vadit">
