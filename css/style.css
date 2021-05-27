@@ -41,7 +41,7 @@ input::placeholder {
    min-width: 270px;
    width: 45%;
    height: 50%;
-   background: rgb(62, 155, 155);
+   background: rgba(62, 155, 155, .5);
    text-align: center;
    margin: 20% auto;
    display: block;
